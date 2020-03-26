@@ -1,0 +1,19 @@
+<persistence>
+    <persistence-unit
+            name="MyApplicationPU"
+            transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>entity.Person</class>
+        <class>entity.Movie</class>
+        <properties>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.Oracle12cDialect"/>
+            <property name="hibernate.connection.driver_class"
+                      value="oracle.jdbc.driver.OracleDriver"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:oracle:thin:@localhost:1521:XE"/>
+            <property name="javax.persistence.jdbc.user" value="STUDENT"/>
+            <property name="javax.persistence.jdbc.password" value="STUDENT"/>
+        </properties>
+    </persistence-unit>
+</persistence>
